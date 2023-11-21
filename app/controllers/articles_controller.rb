@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
 					flash[:notice] = "Article was created successfully!"
         	redirect_to article_path(@article)
 				else
-					flash[:notice] = "Failed to save the article!"
+					flash[:notice] = "Failed to create article!"
 					#render 'new'
 					render 'new', status: :unprocessable_entity
 				end
