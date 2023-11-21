@@ -1,0 +1,8 @@
+@import 'bootstrap/scss/bootstrap';
+
+.navbar{
+  background-color: red !important;
+}
+#home-container{
+  margin-bottom: 25px;
+}
