@@ -31,10 +31,10 @@ gem "jbuilder"
 gem "redis", "~> 4.0"
 
 # Added Bootstrap
-gem "cssbundling-rails"
+gem "bootstrap"
 
 # For custom css
-gem 'sass-rails'
+gem 'sassc-rails'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
