@@ -1,3 +1,22 @@
 .navbar {
   background-color: orangered !important;
 }
+
+.jumbotron {
+  background-image: asset-url('images/jumbotron.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgrey;
+}
+
+/* Other Classes for Page Styling */

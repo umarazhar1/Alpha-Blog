@@ -1,6 +1,6 @@
 <h1 style = "text-align: center;"> This is Home Page! </h1>
     <div class="container", id = "home-container">
-      <div class="mt-4 p-5 bg-primary text-white rounded">
+      <div class="mt-4 p-5 jumbotron bg-primary text-center text-white rounded">
         <h1 class= "text-cente r">Alpha Blog</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ab
@@ -10,10 +10,12 @@
         </p>
       </div>
     </div>
-    <footer id= "sticky-footer" class= "py-4 bg-dark text-white">
-      <div class="container text-center">
-        <small> Copyright &copy; Your Website</small>
-      </div>
-    </footer>
 
-<%= link_to 'Articles Listing Page', articles_path%> | <%= link_to 'About Page', about_path%>
+    <div id="page-content">
+    </div>
+    <%= link_to 'Articles Listing Page', articles_path%> | <%= link_to 'About Page', about_path%>
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white">
+      <div class="container text-center">
+        <small>Copyright &copy; Your Website</small>
+      </div>
+  </footer>
