@@ -8,7 +8,7 @@
           <div class="card-header font-italic"> by Umar Azhar </div>
           <div class="card-body">
             <h5 class="card-title"><%= link_to article.title, article_path(article), class: "text-success text-decoration-none" %></h5>
-            <p class="card-text"><%= truncate(article.description, length: 100) %></p>
+            <p class="card-text"><%= truncate(article.description, length: 25) %></p>
             <%= link_to 'View', article_path(article), class: "btn btn-outline-success" %>
             <%= link_to 'Edit', edit_article_path(article), class: "btn btn-outline-info" %>
             <%= link_to 'Delete', article_path(article.id), class: "btn btn-outline-danger", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
@@ -37,7 +37,7 @@
       <% @articles.each do |article| %>
         <tr>
           <td><%= article.title %></td>
-          <td><%= article.description %></td>
+          <td><%= truncate(article.description, length: 25) %></td>
           <td><%= link_to 'Show', article_path(article) %></td>
           <td><%= link_to 'Edit', edit_article_path(article) %></td>
           <td><%= link_to 'Delete', article_path(article.id), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %></td>
