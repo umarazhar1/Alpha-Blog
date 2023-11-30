@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
     before_action :set_article, only: [:show, :edit, :update, :destroy]
 		def show
         # debugger
+				# binding.break # Call to debugger
     end
 
     def index
