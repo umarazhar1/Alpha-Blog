@@ -10,6 +10,20 @@ class UsersController < ApplicationController
       flash[:notice] = "Welcome to the Alpha Blog #{@user.username}, you have successfully signed up"
       redirect_to articles_path
     else
+      render 'new', status: :unprocessable_entity
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      flash[:notice] = "Your account information was successfully updated"
+      redirect_to articles_path
+    else
       render 'new'
     end
   end
