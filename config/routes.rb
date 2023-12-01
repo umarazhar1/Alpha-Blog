@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'delete_article', to: 'articles#destroy_a'
   resources :articles#, only: [:show, :index, :new, :create, :edit, :update, :destroy]
-
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
   # Defines the root path route ("/")
   # root "articles#index"
 end
