@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_01_140454) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_04_162710) do
   create_table "accounts", force: :cascade do |t|
     t.string "account_no"
     t.integer "supplier_id", null: false
@@ -61,6 +61,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_01_140454) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
+    t.boolean "admin", default: false
   end
 
   add_foreign_key "accounts", "suppliers"
